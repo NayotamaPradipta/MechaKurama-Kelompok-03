@@ -1,5 +1,5 @@
-#include "func.h"
-#include <stdio.h>
+#include "func.hpp"
+#include <iostream>
 
 int main(){
     char Map[MAP_SIZE][MAP_SIZE]; // Inisialisasi map berukuran NxN

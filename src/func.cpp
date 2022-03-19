@@ -1,16 +1,16 @@
-#include "func.h"
-#include <stdio.h>
+#include "func.hpp"
+#include <iostream>
 // File untuk implementasi fungsi 
 
-
+using namespace std;
 
 void displayMap(char Map[][MAP_SIZE]){
     printf("Map: \n");
     for (int i = 0; i < MAP_SIZE; i++){
         for (int j = 0; j < MAP_SIZE; j++){
-            printf("%c ", Map[i][j]);
+            cout << Map[i][j];
         }
-        printf("\n");
+        cout << endl;
     }
 }
 

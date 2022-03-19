@@ -1,4 +1,4 @@
 compile: 
-	g++ main.c func.c -o a
+	g++ main.cpp func.cpp -o a
 run: 
 	./a
