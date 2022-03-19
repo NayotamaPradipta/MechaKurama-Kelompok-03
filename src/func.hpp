@@ -1,7 +1,7 @@
 // Header file
 #ifndef _FUNC_H_
 #define _FUNC_H_
-#define MAP_SIZE 5
+#define MAP_SIZE 10
 
 typedef struct {
     char logo;
@@ -17,6 +17,8 @@ typedef struct {
     int X;
     int Y;
     int health;
+    int damage;
+    int range;
 } MechaKurama;
 
 
