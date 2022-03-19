@@ -21,6 +21,7 @@ void setupRobot(Robot *r){
     r->health = 100; // Masih asal-asalan
     r->damage = 20; // Masih asal-asalan 
     r->range = 2; // Masih asal-asalan
+    r->MKDefeated = 0; // Pada awalnya robot belum mengalahkan Mecha Kurama
 }
 
 void setupMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE]){

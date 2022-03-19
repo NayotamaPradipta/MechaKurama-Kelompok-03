@@ -10,6 +10,7 @@ typedef struct {
     int health;
     int damage;
     int range;
+    int MKDefeated; 
 } Robot;
 
 typedef struct {
@@ -34,13 +35,25 @@ void setupMap(char Map[][MAP_SIZE]);
 // Fungsi untuk display map
 void displayMap(char Map[][MAP_SIZE]);
 
+// Fungsi untuk mengecek apakah move legal atau tidak 
+bool legalMove(Robot r, char Map[][MAP_SIZE], char command);
+
 // Fungsi untuk memindahkan posisi robot sesuai dengan command
 void Move(Robot r, char Map[][MAP_SIZE], char command);
 
 // Fungsi untuk attack MechaKurama
 void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE]);
 
+// Fungsi untuk menyerang Robot
+void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]);
+
 // Fungsi untuk cek jarak robot dengan mecha kurama
 int getRange(Robot r, MechaKurama MK);
+
+// Fungsi untuk spawn Mecha Kurama baru jika sudah tidak ada lagi MechaKurama pada map
+void spawnMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE]);
+
+// Fungsi untuk menampilkan pesan kesalahan
+void printError();
 
 #endif
