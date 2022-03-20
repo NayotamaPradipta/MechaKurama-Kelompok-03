@@ -1,6 +1,7 @@
 #include "func.hpp"
 #include <iostream>
 #include <time.h>
+#include <cmath>
 // File untuk implementasi fungsi 
 
 using namespace std;
@@ -58,7 +59,7 @@ void setupMap(char Map[][MAP_SIZE]){
 }
 
 
-void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE]);{
+void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE]){
     if (inRangeRobot(r, *MK)){
         MK->health -= r.damage;
     }
@@ -121,7 +122,7 @@ void Move(Robot *r, char Map[][MAP_SIZE], int command){
 
 int getRange(Robot r, MechaKurama MK){
     // ini apaa wkwk
-    return (sqrt(pow(MK.x - r.x) + pow(MK.y - r.y)))
+    return (sqrt(pow((MK.X - r.X),2) + pow((MK.Y - r.Y),2)));
 }
 
 bool inRangeRobot(Robot r, MechaKurama MK){
@@ -141,6 +142,7 @@ void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]){
         MAP[r->X][r->Y] = '-';
     }
 }
+
 
 
 
