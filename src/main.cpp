@@ -22,7 +22,7 @@ int main(){
         displayMap(Map); //Menampilkan peta
         cout<<"Posisi Robot: ("<<R.X<<','<<R.Y<<')'<<endl; //Menampilkan posisi robot
         cout<<"Jarak Mecha-Kurama dengan robot: "<<getRange(R,MK)<<endl; //menampilkan jarak mecha-kurama dengan robot
-        cout<< "Daftar Command: \n 1. Move \n 2. Attack \n 3.Quit \n \n Masukkan command (1/2/3): "<<endl; 
+        cout<< "Daftar Command: \n 1. Move \n 2. Attack \n 3. Quit \n \n Masukkan command (1/2/3): "<<endl; 
 
         //input command 
         int command;
