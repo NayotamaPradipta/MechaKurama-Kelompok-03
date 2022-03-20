@@ -57,6 +57,16 @@ void setupMap(char Map[][MAP_SIZE]){
     }
 }
 
+
+void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE]);{
+    if (inRangeRobot(r, *MK)){
+        MK->health -= r.damage;
+    }
+    if (MK->health <= 0){
+        MAP[MK->X][MK->Y] = '-';
+    }
+}
+
 bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK){
     if (command == 1){
         if (r.X == 0 || (r.X-1 == MK.X && r.Y == MK.Y)){
@@ -125,5 +135,6 @@ void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]){
         MAP[r->X][r->Y] = '-';
     }
 }
+
 
 
