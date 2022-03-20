@@ -38,8 +38,8 @@ make run
 <br>
 
 ### Daftar Anggota Kelompok <br><br>
-1. Muhammad Fadhil Amri
-2. Nayotama Pradipta
-3. Mujahidah Kamilah
-4. Taufiq Hidayat
+1. Muhammad Fadhil Amri - 16521336
+2. Nayotama Pradipta - 13520089
+3. Mujahidah Kamilah - 19821105
+4. Taufiq Hidayat - 16521082
 
