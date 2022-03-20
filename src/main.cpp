@@ -11,10 +11,9 @@ int main(){
     Robot R;
     MechaKurama MK;    
     setupMap(Map);
-    setupRobot(&R);
-    setupMechaKurama(&MK, Map);
-    Map[9][0] = R.logo; // Robot dimulai di koordinat 0,0 (catatan: koordinat 0,0 kartesian akan muncul sebagai [9][0] pada matriks 10x10)
-    Map[MK.X][MK.Y]=MK.logo;
+    setupRobot(&R, Map);
+    setupMechaKurama(&MK, Map, R);
+
     
 
     //GAME
@@ -54,7 +53,7 @@ int main(){
                     cout<<"Daftar Arah: \n 1. Atas \n 2. Kanan \n 3. Bawah \n 4. Kiri \n \n Masukkan Arah(1/2/3/4): "<<endl;
                 }
             }
-            Move(R,Map,direction); //Pemanggilan fungsi Move
+            Move(&R,Map,direction, MK); //Pemanggilan fungsi Move
         } else if (command == 2){ //eksekusi command Attack
             attackMechaKurama(R,&MK,Map,&Poin); //pemanggilan fungsi attack
         } else { //eksekusi command Quit

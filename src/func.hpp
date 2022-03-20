@@ -2,7 +2,7 @@
 #ifndef _FUNC_H_
 #define _FUNC_H_
 #define MAP_SIZE 10
-
+#include <iostream>
 typedef struct {
     char logo;
     int X;
@@ -23,11 +23,13 @@ typedef struct {
 } MechaKurama;
 
 
+
 // Fungsi untuk inisialisasi robot 
-void setupRobot(Robot *r);
+void setupRobot(Robot *r, char Map[][MAP_SIZE]);
+
 
 // Fungsi untuk inisialisasi Mecha Kurama;
-void setupMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE]);
+void setupMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE], Robot r);
 
 // Fungsi untuk inisialisasi map 
 void setupMap(char Map[][MAP_SIZE]);
@@ -36,13 +38,13 @@ void setupMap(char Map[][MAP_SIZE]);
 void displayMap(char Map[][MAP_SIZE]);
 
 // Fungsi untuk mengecek apakah move legal atau tidak 
-bool legalMove(Robot r, char Map[][MAP_SIZE], char command);
+bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 
 // Fungsi untuk memindahkan posisi robot sesuai dengan command
-void Move(Robot r, char Map[][MAP_SIZE], char command);
+void Move(Robot *r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 
 // Fungsi untuk attack MechaKurama
-void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE]);
+void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE], int *Poin);
 
 // Fungsi untuk menyerang Robot
 void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]);
@@ -53,7 +55,6 @@ int getRange(Robot r, MechaKurama MK);
 // Fungsi untuk spawn Mecha Kurama baru jika sudah tidak ada lagi MechaKurama pada map
 void spawnMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE]);
 
-// Fungsi untuk menampilkan pesan kesalahan
-void printError();
+
 
 #endif
