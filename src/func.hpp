@@ -41,7 +41,7 @@ void displayMap(char Map[][MAP_SIZE]);
 bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 
 // Fungsi untuk memindahkan posisi robot sesuai dengan command
-void Move(Robot *r, char Map[][MAP_SIZE], int command, MechaKurama MK);
+void Move(Robot *r, char Map[][MAP_SIZE], int command);
 
 // Fungsi untuk cek jarak robot dengan mecha kurama
 int getRange(Robot r, MechaKurama MK);
