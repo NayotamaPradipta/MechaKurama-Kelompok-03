@@ -34,3 +34,12 @@ Kompilasi dilakukan dengan membuka terminal pada direktori src, kemudian mengeks
 ```shell
 make run
 ```
+### Link Github:  https://github.com/NayotamaPradipta/MechaKurama-Kelompok-03
+<br>
+
+### Daftar Anggota Kelompok <br><br>
+1. Muhammad Fadhil Amri
+2. Nayotama Pradipta
+3. Mujahiadh Kamilah
+4. Taufiq Hidayat
+
