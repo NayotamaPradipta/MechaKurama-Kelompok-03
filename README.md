@@ -19,3 +19,16 @@ Tugas Besar Kelompok Divisi Programming
 4. Robot memiliki atribut health
 5. Robot dapat menyerang Mecha-Kurama dengan damage yang konstan dan juga memiliki jarak maksimum untuk menyerang
 6. Robot dapat menghitung jarak dengan Mecha-Kurama
+
+### Penjelasan Program yang dibuat <hr>
+
+Semua <i>source code</i> berada di folder ```src```. Pada folder ```src```, terdapat tiga file C++ yaitu: main.cpp, func.cpp, & func.hpp. Penjelasan ketiga file sebagai berikut: <br>
+1. main.cpp: Merupakan file utama dengan fungsi main. Alur program dapat dilihat secara jelas pada file ini.
+2. func.hpp: Merupakan header file yang berisi deklarasi fungsi-fungsi yang digunakan pada main
+3. func.cpp: Merupakan file implementasi fungsi yang ada di func.hpp. 
+
+### Cara compile program <hr>
+Kompilasi dilakukan dengan membuka terminal pada direktori src, kemudian mengeksekusi makefile sebagai berikut: <br>
+```shell
+make run
+```
