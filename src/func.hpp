@@ -3,6 +3,7 @@
 #define _FUNC_H_
 #define MAP_SIZE 10
 #include <iostream>
+
 typedef struct {
     char logo;
     int X;
@@ -44,7 +45,7 @@ bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 void Move(Robot *r, char Map[][MAP_SIZE], int command);
 
 // Fungsi untuk cek jarak robot dengan mecha kurama
-int getRange(Robot r, MechaKurama MK);
+float getRange(Robot r, MechaKurama MK);
 
 // Fungsi mengembalikan true jika robot dapat menyerang MK
 bool inRangeRobot(Robot r, MechaKurama MK);
