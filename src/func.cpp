@@ -118,6 +118,12 @@ void Move(Robot *r, char Map[][MAP_SIZE], int command){
     }
  
 }
+
+int getRange(Robot r, MechaKurama MK){
+    // ini apaa wkwk
+    return(sqrt(pow(MK.x - r.x) + pow(MK.y - r.y)))
+}
+
 bool inRangeRobot(Robot r, MechaKurama MK){
     return (getRange(r,MK) <= 3);
 }
