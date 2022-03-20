@@ -40,6 +40,6 @@ make run
 ### Daftar Anggota Kelompok <br><br>
 1. Muhammad Fadhil Amri
 2. Nayotama Pradipta
-3. Mujahiadh Kamilah
+3. Mujahidah Kamilah
 4. Taufiq Hidayat
 
