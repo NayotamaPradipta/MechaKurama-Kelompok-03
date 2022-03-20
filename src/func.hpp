@@ -43,14 +43,20 @@ bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 // Fungsi untuk memindahkan posisi robot sesuai dengan command
 void Move(Robot *r, char Map[][MAP_SIZE], int command, MechaKurama MK);
 
+// Fungsi untuk cek jarak robot dengan mecha kurama
+int getRange(Robot r, MechaKurama MK);
+
+// Fungsi mengembalikan true jika robot dapat menyerang MK
+bool inRangeRobot(Robot r, MechaKurama MK);
+
+// Fungsi mengembalikan true jika MK dapat menyerang robot 
+bool inRangeMK(MechaKurama MK, Robot r);
+
 // Fungsi untuk attack MechaKurama
 void attackMechaKurama(Robot r, MechaKurama *MK, char MAP[][MAP_SIZE], int *Poin);
 
 // Fungsi untuk menyerang Robot
 void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]);
-
-// Fungsi untuk cek jarak robot dengan mecha kurama
-int getRange(Robot r, MechaKurama MK);
 
 
 

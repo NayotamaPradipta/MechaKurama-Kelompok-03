@@ -108,3 +108,22 @@ void Move(Robot *r, char Map[][MAP_SIZE], int command){
     }
  
 }
+bool inRangeRobot(Robot r, MechaKurama MK){
+    return (getRange(r,MK) <= 3);
+}
+
+
+bool inRangeMK(MechaKurama MK, Robot r){
+    return (getRange(r,MK) <= 2);
+}   
+
+void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]){
+    if (inRangeMK(MK, *r)){
+        r->health -= MK.damage;
+    }
+    if (r->health <= 0){
+        MAP[r->X][r->Y] = '-';
+    }
+}
+
+
