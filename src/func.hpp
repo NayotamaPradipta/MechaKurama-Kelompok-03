@@ -52,9 +52,6 @@ void attackRobot(Robot *r, MechaKurama MK, char MAP[][MAP_SIZE]);
 // Fungsi untuk cek jarak robot dengan mecha kurama
 int getRange(Robot r, MechaKurama MK);
 
-// Fungsi untuk spawn Mecha Kurama baru jika sudah tidak ada lagi MechaKurama pada map
-void spawnMechaKurama(MechaKurama *MK, char Map[][MAP_SIZE]);
-
 
 
 #endif

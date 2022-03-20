@@ -85,26 +85,26 @@ bool legalMove(Robot r, char Map[][MAP_SIZE], int command, MechaKurama MK){
     }
 }
 
-void Move(Robot *r, char Map[][MAP_SIZE], int command, MechaKurama MK){
-    if (legalMove(*r, Map, command, MK)){
-        if (command == 1) {
-            Map[r->X][r->Y] = '-';
-            r->X -= 1;
-            Map[r->X][r->Y] = r->logo;
-        } else if (command == 2){
-            Map[r->X][r->Y] = '-';
-            r->Y += 1;
-            Map[r->X][r->Y] = r->logo;
-        } else if (command == 3){
-            Map[r->X][r->Y] = '-';
-            r->X += 1;
-            Map[r->X][r->Y] = r->logo;
-        } else {
-            Map[r->X][r->Y] = '-';
-            r->Y -= 1;
-            Map[r->X][r->Y] = r->logo;
-        }
+void Move(Robot *r, char Map[][MAP_SIZE], int command){
+    /* I.S Move sudah legal
+       F.S Posisi robot terupdate, Map terupdate sesuai command */
+    if (command == 1) {
+        Map[r->X][r->Y] = '-';
+        r->X -= 1;
+        Map[r->X][r->Y] = r->logo;
+        
+    } else if (command == 2){
+        Map[r->X][r->Y] = '-';
+        r->Y += 1;
+        Map[r->X][r->Y] = r->logo;
+    } else if (command == 3){
+        Map[r->X][r->Y] = '-';
+        r->X += 1;
+        Map[r->X][r->Y] = r->logo;
     } else {
-        cout << "Illegal Move detected!" << endl;
+        Map[r->X][r->Y] = '-';
+        r->Y -= 1;
+        Map[r->X][r->Y] = r->logo;
     }
+ 
 }

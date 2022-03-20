@@ -45,14 +45,15 @@ int main(){
             //validasi arah
             valid=false;
 
-            while (not valid){
+            do {
                 cin>>direction;
                 if (direction == 1 || direction == 2 || direction ==3 || direction==4){
                     valid = true;
                 } else{
                     cout<<"Daftar Arah: \n 1. Atas \n 2. Kanan \n 3. Bawah \n 4. Kiri \n \n Masukkan Arah(1/2/3/4): "<<endl;
                 }
-            }
+            } while (not valid && !legalMove(R, Map, direction, MK));
+            
             Move(&R,Map,direction, MK); //Pemanggilan fungsi Move
         } else if (command == 2){ //eksekusi command Attack
             attackMechaKurama(R,&MK,Map,&Poin); //pemanggilan fungsi attack
