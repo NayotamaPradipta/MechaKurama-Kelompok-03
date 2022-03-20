@@ -11,7 +11,6 @@ typedef struct {
     int health;
     int damage;
     int range;
-    int MKDefeated; 
 } Robot;
 
 typedef struct {
