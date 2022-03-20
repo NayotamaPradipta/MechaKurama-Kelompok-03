@@ -46,20 +46,21 @@ int main(){
             valid=false;
 
             do {
-                cin>>direction;
-                if (direction == 1 || direction == 2 || direction ==3 || direction==4){
+                cin>>direction; //input arah
+                if (direction == 1 || direction == 2 || direction ==3 || direction==4){ //jika valid
                     valid = true;
                    
                 } 
-                else{
+                else{ //jika tidak valid
                     cout<<"Arah yang dimasukkan tidak tersedia! \n Daftar Arah: \n 1. Atas \n 2. Kanan \n 3. Bawah \n 4. Kiri \n \n Masukkan Arah(1/2/3/4): "<<endl;
+                    valid = false;
                 }
 
-                 if(!legalMove(R, Map, direction, MK) && valid){
+                if(!legalMove(R, Map, direction, MK) && valid){ //Jika arah valid tetapi menurut ketentuan robot tidak dapat bergerak
                     cout<<"Robot tidak bisa bergerak! \n Daftar Arah: \n 1. Atas \n 2. Kanan \n 3. Bawah \n 4. Kiri \n \n Masukkan Arah(1/2/3/4): "<<endl;
                 } 
 
-            } while (not valid || !legalMove(R, Map, direction, MK));
+            } while (not valid || !legalMove(R, Map, direction, MK));//validasi arah
 
             Move(&R,Map,direction); //Pemanggilan fungsi Move
             attackRobot(&R, MK, Map); // Mecha Kurama akan menyerang jika dalam range
